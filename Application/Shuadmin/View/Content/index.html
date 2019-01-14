@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="__PUBLIC__/css/common.css">
+        <link rel="stylesheet" href="__PUBLIC__/css/main.css">
+        <script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/colResizable-1.3.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+
+        <script type="text/javascript">
+            $(function () {
+                $(".list_table").colResizable({
+                    liveDrag: true,
+                    gripInnerHtml: "<div class='grip'></div>",
+                    draggingClass: "dragging",
+                    minWidth: 30
+                });
+         });      
+        </script>
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div class="container">
+            <div id="button" class="mt10">
+                <table width="100%" border="0">
+                    <tr>
+
+                        <td > 
+                            <input type="button" name="button" class="btn btn82 btn_add" value="新增" onclick="location.href='{:U('Content/add')}'"></td>
+
+                        <td width="35%">
+                        </td>
+
+                    </tr>
+                </table>
+
+
+
+            </div>
+            <div id="table" class="mt10">
+                <div class="box span10 oh">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="list_table">
+                        <tr>
+
+                            <th width="150" >ID</th>
+                            <th width="350">标题</th>
+                            <th width="80">类型</th>
+                            <th>位置</th>
+                            <th width="280">添加时间</th>
+
+                            <th>操作</th>
+                        </tr>
+                        <tbody id="list">
+
+                            
+                            
+                            <volist  name='result' id='vo'>
+                            <tr class="tr">
+
+                                <td>{$vo.id}</td>
+                                <td class="td_left">{$vo.title}</td>
+<td class="td_left"><eq name="vo['type']" value='1'>关于我们</eq><eq name="vo['type']" value='2'>联系我们</eq><eq name="vo['type']" value='3'>企业文化</eq><eq name="vo['type']" value='4'>团队介绍</eq></td>
+                                <td>
+                               <eq name="vo.postion" value="1">首页</eq>
+                               <eq name="vo.postion" value="2">底部</eq>
+                               <eq name="vo.postion" value="3">单页</eq>
+
+                                </td>
+                                <td>{$vo.addtime}</td>
+
+                                <td><a href="{:U('Content/edit',array('id'=>$vo['id']))}">修改</a>&nbsp;&nbsp;&nbsp;<a href="{:U('Content/del',array('id'=>$vo['id']))}">删除</a></td>
+                            </tr>
+                            </volist>
+                            
+                            
+
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div> 
+    </body>
+</html>

@@ -1,0 +1,58 @@
+.s-banne {
+  width: 100%;
+}
+
+.s-banner img {
+  width: 100%;
+}
+
+.s-content {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.s-tap-tittle {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.s-tap-tittle li {
+  font-size: 34px;
+  float: left;
+  padding: 10px 16px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.s-tap-tittle ul {
+  width: 388px;
+  left: calc(50% - 194px);
+  position: absolute;
+  top: -30px;
+}
+
+.s-con {
+  float: left;
+  margin-top: 50px;
+  line-height: 2;
+  width: 320px;
+
+}
+
+.s-con .s-con-tittle {
+  font-size: 16px;
+}
+.s-con p{
+  color: #4f4f4f;
+  padding-left: 26px;
+}
+.s-con-img{
+  width: 100%;
+  margin-top: 50px;
+}
+.s-con-img img{
+  width: 100%;
+}
+.s-tap-tittle .active{
+  color:#02628a;
+}

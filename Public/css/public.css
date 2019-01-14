@@ -1,0 +1,202 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, nav, section, footer, p, h1, h2, h3, h4, h5, h6, span, img, a, ul, li, ol, dl, dd, dt, table, th, tr, td, form, input, select, option, textarea, button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  vertical-align: top;
+}
+
+.clear::after {
+  content: "";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+
+.clear {
+  *zoom: 1;
+}
+
+body {
+  font-family: "Microsoft yahei", 'Arial';
+  font-size: 14px;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/***************以上是公共修饰 集体声明*******************/
+
+/*头部开始*/
+
+/*top-nav*/
+
+.nav-top {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 50%;
+  float: left;
+}
+
+.logo img {
+  width: 84%;
+  display: block;
+  margin-top: 10px;
+}
+
+.nav-top .er {
+  float: right;
+}
+
+.nav-top .er img {
+  width: 52%;
+  margin: 10px;
+}
+
+.num {
+  padding-top: 22px;
+  float: right;
+  width: 20%;
+  line-height: 2;
+}
+
+.num img {
+  float: left;
+  margin-right: 16px;
+}
+
+.num p {}
+
+/*top-nav 结束*/
+
+/*bottom-nav*/
+
+.nav-bottom {
+  height: 46px;
+  width: 100%;
+  background: url(../images/nav.png)
+}
+
+.n-b-wrap {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 46px;
+}
+
+.n-b-wrap .active {
+  background-color: #406c8e;
+}
+
+.n-b-wrap li {
+  float: left;
+  width: 10%;
+  text-align: center;
+  position: relative;
+}
+
+.n-b-wrap li a {
+  color: #fff;
+}
+
+.n-b-wrap li span {
+  position: absolute;
+  right: -6px;
+  color: #fff;
+}
+
+/*bottom-nav 结束*/
+
+/*footer*/
+
+.footer {
+  background: url(../images/footer.png) 2px;
+  width: 100%;
+  height: 300px;
+}
+
+.f-wrap {
+  width: 860px;
+  margin: 0 auto;
+  padding-top: 100px;
+  color: #fff;
+  position: relative;
+}
+
+.f-wrap .er {
+  float: left;
+}
+
+.f-wrap .img {
+  margin-left: 20px;
+  float: left;
+}
+
+.f-wrap .img img {
+  display: block;
+  margin-bottom: 30px;
+  margin-top: 13px;
+}
+
+.f-wrap .img a {
+  background: red;
+  padding: 9px 27px;
+  border-radius: 20px;
+	color: #fff;
+}
+
+.f-txt {
+  line-height: 2;
+  margin-left: 30px;
+  float: left;
+}
+.modal {
+  width: 320px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left:330px;
+  background: #184469;
+  overflow: hidden;;
+  width: 0;
+  transition: all .3s
+}
+
+.modal p {
+  color: #fff;
+  line-height: 2;
+  text-align: center;
+  margin-top: 50px;
+  width: 320px;
+}
+
+.modal input {
+  background: #fff;
+  height: 30px;
+}
+
+.f-submit {
+  margin-top: 10px;
+  background: red !important;
+  padding: 6px 20px;
+  margin: 14px auto 0 auto;
+  display: block;
+  color: #fff;
+}
+/*footer结束*/
+
+/*头部结束*/

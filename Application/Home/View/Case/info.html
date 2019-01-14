@@ -1,0 +1,56 @@
+﻿<include file="Public:head"/>
+<div class="inner-main-container">
+    <div class="inner-banner normal-inner-banner cases_info_banner">
+        <img src="__PUBLIC__/Home/picture/ourwork-pc-bg.jpg" alt="网站设计案例" />
+        <div class="normal-banner-inner-wrap">
+            <div class="normal-banner-inner">
+                <div class="ourwork-pc-title container">
+                    <h1 class="title">{$info.title}</h1>
+                    <div class="line"></div>
+                    <div class="descrition">{$info.describle}</div>
+                    <div class="link-wrap clearfix">
+                        <a class="link link1 on" href="{:U('Case/info',array('articleid'=>$info['articleid'],'type'=>1))}"></a>
+                        <a href="{:U('Case/info',array('articleid'=>$info['articleid'],'type'=>2))}" class="link link2"></a>
+                       <!--<a href="http://www.lettown.com/Index/index.html" rel="nofollow" class="link link3"></a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ourwork-page">
+        <div class="container">
+            <div class="ourwork-pc-detail">
+                <div class="ourwork-pc-detail-inner">
+                    <article>
+                        <div class="ourwork-pc-image">
+                            <eq name="type" value="1">
+                          {$info.content|htmlspecialchars_decode}
+                            </eq>
+                            <eq name="type" value="2">
+                                {$info.pcontent|htmlspecialchars_decode}
+                            </eq>
+                        </div>
+                                            </article>
+                </div>
+            </div>
+        </div>
+        <notempty name="next">
+        <div class="ourwork-prev-next">
+                <div class="ourwork-prev-next-inner">
+                    <a href="{:U('Case/info',array('articleid'=>$next['articleid']))}" title="{$next.title}" class="next"> <strong class="word">下一个作品</strong> <i class="icon"></i> </a>
+                </div>
+            </div>
+        </notempty>
+    </div>
+</div>
+<include file="Public:footer"/>
+    </div>
+</div>
+<!--nav-->
+<include file="Public:left"/>
+
+<!--end nav-->
+<script src="__PUBLIC__/Home/js/hotcss.js"></script>
+
+</body>
+</html>

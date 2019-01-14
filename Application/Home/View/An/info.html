@@ -1,0 +1,50 @@
+﻿<include file="Public:head"/>
+<div class="inner-main-container">    <div class="inner-banner normal-inner-banner solution-info-banner">        <img src="__PUBLIC__/Home/picture/banner_solution.jpg">        <div class="normal-banner-inner-wrap">            <div class="normal-banner-inner">                <h2 class="inner-banner-title">手机网站解决方案</h2>            </div>        </div>    </div>    <div class="normal-info-page">        <div class="container">            <div class="normal-info-wrap">
+    <div class="normal-info-container">
+        <article>
+            <div class="editor" id="editor">
+                {$info.content|htmlspecialchars_decode}
+            </div>
+        </article>
+        <script type="text/javascript">
+            document.getElementById("menu7").className = "on";                var resizeContentID = "editor";                var maxWidth = $("#editor").width();                var images = document.getElementById(resizeContentID).getElementsByTagName("img");                for (var i = 0; i < images.length; i++) {                    resizepic(images[i]);                }                function resizepic(thispic)                {                    thispic.onload = function() {                        if (thispic.width > maxWidth) {                            thispic.style.height = thispic.height * maxWidth / thispic.width + "px";                            thispic.style.width = maxWidth + "px";                        }                    }                }		document.oncopy=function(){return false;};
+        </script>
+    </div>
+    <div class="more-relate-list">
+        <h2 class="relate-title">其他网站解决方案</h2>
+        <div class="solution-list">
+            <ul class="item-list clearfix">
+                <volist name="other" id="vo">
+                <li class="each-item">
+                    <a href="{:U('An/info',array('articleid'=>$vo['articleid']))}" class="item-inner">
+                        <div class="image-wrap">
+                            <div class="image-inner">
+                                <img src="__ROOT__/Uploads/{$vo.imagename}" alt="{$vo.title}">
+                            </div>
+                        </div>
+                        <div class="text-wrap">
+                            <div class="text-inner">
+                                <h3 class="title">{$vo.title}</h3>
+                                <div class="descrition">{$vo.describle}</div>
+                            </div>
+                        </div>
+                    </a>                            </li>
+
+                </volist>
+
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<include file="Public:footer"/>
+    </div>
+</div>
+<!--nav-->
+<include file="Public:left"/>
+<!--end nav-->
+<script src="__PUBLIC__/Home/js/hotcss.js"></script>
+</body>
+</html>

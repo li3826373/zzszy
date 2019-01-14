@@ -1,0 +1,238 @@
+﻿<include file="Public:head"/>
+<div class="inner-main-container">
+    <div class="inner-banner fullwindow-banner">
+        <img src="__PUBLIC__/Home/picture/banner_about.jpg" alt="郑州尚之奕电子科技有限公司" />
+        <div class="fullwindow-banner-inner-wrap">
+            <div class="fullwindow-banner-inner">
+                <ul class="item-list clearfix">
+                    <li class="each-item">
+                        <div class="item-inner">
+                            <i class="icon-wrap">
+                                <span class="icon">
+                                    <img src="__PUBLIC__/Home/picture/about-icon1-1a.png" alt="设计与技术并重" />
+                                </span>
+                            </i>
+                            <div class="text">
+                                <strong class="text-inner">设计与技术并重</strong>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="each-item">
+                        <div class="item-inner">
+                            <i class="icon-wrap">
+                                <span class="icon">
+                                    <img src="__PUBLIC__/Home/picture/about-icon1-2a.png" alt="一站式网站建设服务" />
+                                </span>
+                            </i>
+                            <div class="text">
+                                <strong class="text-inner">一站式服务</strong>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="each-item">
+                        <div class="item-inner">
+                            <i class="icon-wrap">
+                                <span class="icon">
+                                    <img src="__PUBLIC__/Home/picture/about-icon1-3a.png" alt="资深网站设计团队" />
+                                </span>
+                            </i>
+                            <div class="text">
+                                <strong class="text-inner">资深设计团队</strong>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="each-item">
+                        <div class="item-inner">
+                            <i class="icon-wrap">
+                                <span class="icon">
+                                    <img src="__PUBLIC__/Home/picture/about-icon1-4a.png" alt="拥有网站建设自主产权技术" />
+                                </span>
+                            </i>
+                            <div class="text">
+                                <strong class="text-inner">拥有自主产权技术</strong>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="each-item">
+                        <div class="item-inner">
+                            <i class="icon-wrap">
+                                <span class="icon">
+                                    <img src="__PUBLIC__/Home/picture/about-icon1-5a.png" alt="高效管理" />
+                                </span>
+                            </i>
+                            <div class="text">
+                                <strong class="text-inner">高效项目执行管理</strong>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="each-item">
+                        <div class="item-inner">
+                            <i class="icon-wrap">
+                                <span class="icon">
+                                    <img src="__PUBLIC__/Home/picture/about-icon1-6a.png" alt="严格网站细节检测标准" />
+                                </span>
+                            </i>
+                            <div class="text">
+                                <strong class="text-inner">严苛细节标准</strong>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="about-page">
+        <div class="container">
+            <div class="about-wrap-first mb15">
+                <div class="inner-text-wrap">
+                    <div class="inner-text">
+                        <h2 class="inner-title">{$about.title}</h2>
+                        <span class="inner-line"></span>
+                        <div class="inner-descrition">{$about.content|htmlspecialchars_decode}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-wrap-second">
+                <div class="about-wrap-inner">
+                    <ul class="item-list clearfix">
+                        <volist name="tu" id="vo">
+                        <li class="each-item">
+                            <div class="item-inner">
+                                <div class="image-wrap">
+                                    <div class="image-inner">
+                                        <img src="__ROOT__/Uploads/{$vo.imagename}" alt="{$vo.title}" />
+                                    </div>
+                                </div>
+                                <div class="text-wrap">
+                                    <div class="text-inner">
+                                        <h3 class="title">{$vo.title}</h3>
+                                        <span class="line"></span>
+                                        <div class="descrition">{$vo.describle}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </volist>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-wrap-three">
+                <div class="about-wrap-inner">
+                    <div class="each-item">
+                        <div class="item-inner clearfix">
+                            <div class="image-wrap">
+                                <div class="image-inner">
+                                    <img src="__PUBLIC__/Home/picture/about-list2.jpg" alt="网站建设行业" />
+                                </div>
+                            </div>
+                            <div class="text-wrap">
+                                <div class="text-inner">
+                                    <h2 class="inner-title">洞察未来<span class="mark"><img src="__PUBLIC__/Home/picture/mark1.jpg"></span>引领行业发展</h2>
+                                    <span class="inner-line"></span>
+                                    <div class="inner-descrition">通过自己的专业眼光，为客户提供各类解决方案，始终为客户思考如何占领互联网。<br><br>一个人能走多远，取决于与谁同行，方维网络团队是一个富有理想和激情的团队，也是一个技术专业化、管理人性化、创新性和学习型的优秀团队。</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-wrap-four">
+                <div class="about-wrap-inner">
+                    <div class="each-item mb15">
+                        <div class="item-inner">
+                            <a href="{:U('Case/index')}" >
+                                <div class="image-wrap">
+                                    <div class="image-inner">
+                                        <img src="__PUBLIC__/Home/picture/about-list3.jpg" alt="网站设计案例" />
+                                    </div>
+                                </div>
+                                <div class="text-wrap">
+                                    <div class="text-inner">
+                                        <h2 class="title"></h2>
+                                        <span class="normal-more-wrap2">
+                                            <i class="icon"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      <!--      <div class="about-wrap-five">
+                <div class="about-wrap-inner">
+                    <div class="item-list">
+                        <div class="each-item">
+                            <div class="item-inner">
+                                <a href="http://www.fwwl.net/about/activity.html" rel="nofollow" class="clearfix">
+                                    <div class="image-wrap">
+                                        <div class="image-inner">
+                                            <img src="__PUBLIC__/Home/picture/about-list4-1.jpg" alt="方维网络活动" />
+                                        </div>
+                                    </div>
+                                    <div class="text-wrap">
+                                        <div class="text-inner">
+                                            <h2 class="inner-title">过往活动一览</h2>
+                                            <div class="inner-descrition">方维网络注重员工团体活动，比如每月的生日会，每年的出游等等。</div>
+                                            <span class="normal-more-wrap2">
+                                                <i class="icon"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="each-item">
+                            <div class="item-inner">
+                                <a href="http://www.fwwl.net/about/job.html"  class="clearfix">
+                                    <div class="image-wrap">
+                                        <div class="image-inner">
+                                            <img src="__PUBLIC__/Home/picture/about-list4-2.jpg" alt="加入方维" />
+                                        </div>
+                                    </div>
+                                    <div class="text-wrap">
+                                        <div class="text-inner">
+                                            <h2 class="inner-title en">JOIN US</h2>
+                                            <div class="inner-descrition">成为方维网络的一员，这里有优美的环境，<span style="font-family:'gotham-medium'">Nice</span> 的团队，这里使你成长。</div>
+                                            <span class="normal-more-wrap2">
+                                                <i class="icon"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>
+<include file="Public:footer"/>
+    </div>
+</div>
+<!--nav-->
+<include file="Public:left"/>
+<!--end nav-->
+<script src="__PUBLIC__/Home/js/hotcss.js"></script>
+<!--<script>
+    var _bdhmProtocol = (("http:" == document.location.protocol) ? " http://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd8344b6a8c16d55b7dabce090ed226b7' type='text/javascript'%3E%3C/script%3E"));   
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "http://hm.baidu.com/hm.js?6a859e19cf092a528c89c574266f4d60";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "http://hm.baidu.com/hm.js?7fbb5eb7382fbb88429c177c19198ffb";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>-->
+</body>
+</html>
+<script src="__PUBLIC__/Home/js/about.js"></script>

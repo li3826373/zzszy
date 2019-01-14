@@ -1,0 +1,83 @@
+﻿<include file="Public:head"/>
+<script src="__PUBLIC__/Home/js/jquery-3.1.1.min.js"></script>
+<script src="__PUBLIC__/Home/js/jquery_form.js"></script>
+<script src="__PUBLIC__/Home/layer/layer.js"></script>
+<!--header-->
+<div class="page_banner" style="background: url(__ROOT__/Uploads/{$banner.imagename}) no-repeat center;"></div><div class="wrap mar">
+
+<div class="left_side">
+<ul class="left_sideul">
+    <volist name="checkall" id="vo">
+        <li><a href="{:U('Service/index',array('typeid'=>$vo['id']))}"><i class="fa fa-arrow-right"></i>&nbsp;&nbsp;{$vo.typename}</a></li>
+        &nbsp;&nbsp;</volist>
+</ul>
+    <div class="pcontact_us ovfl">
+        <p class="pcontact_p1">
+            服务热线：
+        </p>
+        <div class="pcontact_us_01">
+            {$conf.tel}</div>
+    </div>
+<!--contactus-->
+</div>
+<!--left_side-->
+<div class="right_side ">
+<div class="right_title">
+<div class="right_title_left">在线留言</div>
+<div class="right_title_right"><span class="right_title_right_sp1"></span><span class="right_title_right_sp2">当前位置：<a href="/">首页</a> > 在线留言</span></div>
+</div>
+<!--right_title-->
+<div class="right_content">
+ <ul class="message_ul">
+                            <form action="{:U('Message/message')}" method="post" id="permit">
+                                <li><label for="name">姓　　名：</label><input type="text" name="name" id="name" class="G_InputText" value="" placeholder="输入您的姓名" datatype="s2-10" nullmsg="输入您的姓名" sucmsg=" "/></li>
+                                <li><label>电　　话：</label><input type="text" name="phone" id="tel" class="G_InputText" placeholder="输入您的电话" datatype="m" nullmsg="输入您的电话" sucmsg=" "/> </li>
+                                <li><label>地　　址：</label><input type="text" name="address" id="add" class="G_InputText" placeholder="输入您的地址" datatype="*" nullmsg="输入您的地址" sucmsg=" "/>  </li>
+                                <li><label for="content">留言内容：</label><textarea name="content" id="content" class="G_textarea"></textarea>  </li>
+                                <li style="padding-left:30px;"><input id="submit" type="submit" class="But" value="提交留言"></li>
+            </form>
+      </ul>
+                    <div class="clear"></div>
+                  <!--  <dl class="G_tips">
+                        <dt style="color:#f00;">☆ 留言须知</dt>
+                        <dd>·尊重网上道德，遵守中华人民共和国的各项有关法律法规</dd>
+                        <dd>·本网站管理人员有权保留或删除留言中的任意内容</dd>
+                        <dd>·我公司有权在网站内转载或引用您的留言</dd>
+                        <dd>·承担一切因您的行为而直接或间接导致的民事或刑事法律责任</dd>
+                        <dd>·参与本留言即表明您已经阅读并接受上述条款</dd>
+                    </dl>-->
+</div>
+<!--right_content-->
+</div>
+<!--right_side-->
+<div class="clear"></div>
+</div>
+<!--wrap-->
+
+<include file="Public:footer"/>
+<script>
+    $(function () {
+        $('#permit').ajaxForm({
+            success: complete,
+            dataType: 'json'
+        });
+        function complete(data) {
+               if(data.status==false){
+                   layer.open({
+                       content: data.info
+                       ,skin: 'msg'
+                       ,time: 2000 //2秒后自动关闭
+                   });
+               }else{
+                   layer.open({
+                       content: data.info
+                       ,skin: 'msg'
+                       ,time: 2000 //2秒后自动关闭
+                   });
+                   $("form input").val("");
+                   $("form textarea").val("");
+               }
+
+        }
+    });
+</script>

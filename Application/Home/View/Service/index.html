@@ -1,0 +1,94 @@
+﻿<div class="service-page" id="dowebok">
+    <volist name="list" id="vo" offset="0" length="1">
+    <div class="service-wrap service-wrap1 section" data-anchor="section1">
+        <include file="Public:head"/>
+        <div class="service-wrap-inner">
+            <div class="image-wrap">
+                <div class="image-inner"><img src="__ROOT__/Uploads/{$vo.imagename}" alt="{$vo.title}"/></div>
+            </div>
+            <div class="text-wrap">
+                <div class="container">
+                    <div class="text-inner">
+                        <h2 class="title">{$vo.title}</h2><span class="line"></span>
+                        <div class="descrition">
+                          {$vo.describle}                        </div>
+                        <div class="more-wrap">
+                            <a href="{:U('Case/index')}" class="normal-more-wrap3"><span class="more">查看案例</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </volist>
+    <volist name="list" id="vo" offset="1" length="2" key="k">
+    <div class="service-wrap service-wrap{$k+1} section" data-anchor="section1">
+        <div class="service-wrap-inner">
+            <div class="image-wrap">
+                <div class="image-inner"><img src="__ROOT__/Uploads/{$vo.imagename}" alt="{$vo.title}"/></div>
+            </div>
+            <div class="text-wrap">
+                <div class="container">
+                    <div class="text-inner">
+                        <h2 class="title">{$vo.title}</h2><span class="line"></span>
+                        <div class="descrition">
+                            {$vo.describle}                        </div>
+                        <div class="more-wrap">
+                            <a href="{:U('Case/index')}" class="normal-more-wrap3"><span class="more">查看案例</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </volist>
+    <volist name="list" id="vo" offset="3" length="4">
+    <div class="service-wrap service-wrap4 section" data-anchor="section4">
+        <div class="service-wrap-inner">
+            <div class="text-wrap">
+                <div class="container">
+                    <div class="text-inner"><h2 class="title">{$vo.title}</h2><span class="line"></span>
+                        <div class="descrition">{$vo.describle}                       </div>
+                        <div class="more-wrap"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-wrap">
+                <div class="container">
+                    <div class="image-inner"><img src="__ROOT__/Uploads/{$vo.imagename}" alt="APP 开发"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </volist>
+    <div class="section" id="section-footer" data-anchor="footer">
+<include file="Public:footer"/>
+
+    </div>
+</div>
+<!--nav-->
+<include file="Public:left"/>
+<!--end nav-->
+<script src="__PUBLIC__/Home/js/hotcss.js"></script>
+
+</body>
+</html>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $('#dowebok').fullpage({
+            'navigation': true
+        });
+        $(window).resize(function(){
+            autoScrolling();
+        });
+        function autoScrolling(){
+            var $ww = $(window).width();
+            $.fn.fullpage.setAutoScrolling(true);
+        }
+        autoScrolling();
+    });
+</script>
+<link href="__PUBLIC__/Home/css/jquery.fullpage.css" rel="stylesheet">
+<script src="__PUBLIC__/Home/js/jquery.fullpage.js"></script>

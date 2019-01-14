@@ -1,0 +1,156 @@
+.dy-tittle {
+  width: 885px;
+  height: 1px;
+  background: #d3d3d3;
+  position: relative;
+  text-align: center;
+  margin: 90px auto 55px auto;
+}
+
+.dy-tittle span {
+  color: #df000d;
+  font-size: 22px;
+  background: #fff;
+  position: absolute;
+  top: -15px;
+  padding: 0 10px;
+  left: calc(50% - 54px);
+}
+
+.dy-1 {
+  width: 885px;
+  margin: 0 auto;
+}
+
+.dy-1 ul li {
+  width: 33.3%;
+  float: left;
+}
+
+.dy-1 ul .dy-1-tittle {
+  margin-bottom: 20px;
+  min-height: 110px;
+  padding-top: 20px;
+}
+
+.dy-1-tittle h2 {
+  color: #cf000d;
+}
+
+.dy-1-tittle h2 span {
+  font-size: 42px;
+  margin-top: -18px;
+  display: inline-block;
+  color: #cf0010;
+}
+
+.dy-1-tittle p {
+  letter-spacing: 1px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.dy-1 .dy-1-img img {
+  width: 100%;
+  height: 150px;
+}
+
+.dy-1-center {
+  background: #cf000d;
+}
+
+.dy-1 ul li:nth-child(1) .dy-1-tittle {
+  padding-right: 20px;
+}
+
+.dy-1 ul li:nth-child(2) .dy-1-tittle {
+  padding: 30px 10px 10px 10px !important;
+  margin-bottom: 0 !important;
+}
+
+.dy-1 ul li:nth-child(2) .dy-1-tittle h2, .dy-1 ul li:nth-child(2) .dy-1-tittle span, .dy-1 ul li:nth-child(2) .dy-1-tittle p {
+  color: #fff;
+}
+
+.dy-1 ul li:nth-child(3) .dy-1-tittle {
+  padding-left: 20px;
+}
+
+.dy-2 {
+  width: 1200px;
+  margin: 60px auto 30px auto;
+  background: #f2f2f2;
+  padding-top: 70px;
+  border-top: 2px solid #8c0101;
+}
+
+.dy-2 .dy-tittle {
+  margin: 0 auto 60px auto;
+}
+
+.dy-2 .dy-tittle span {
+  background: #f2f2f2;
+}
+
+.dy-2-content {
+  width: 925px;
+  margin: 0 auto;
+}
+
+.dy-2-L {
+  width: 605px;
+  float: left;
+}
+
+.dy-2-L li {
+  width: 100%;
+  line-height: 54px;
+  border-top: 1px dashed #333;
+  border-bottom: 1px dashed #333;
+  padding: 0 5px;
+}
+
+.dy-2-L li span {
+  float: right;
+  color: #999;
+}
+
+.dy-2-L li i {
+  font-style: normal;
+  width: 480px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+  background: url(../images/san.png) left no-repeat;
+  padding-left: 18px;
+}
+
+.dy-2-R {
+  float: right;
+  width: 280px;
+}
+
+.dy-2-R li {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.dy-2-R li img {
+  width: 100%;
+}
+
+.dy-2-R li p {
+  width: 100%;
+  background: #00000080;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  line-height: 1.5;
+}

@@ -1,0 +1,109 @@
+.ss-banner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.ss-banner img {
+  width: 100%;
+  border-radius: 22px;
+}
+
+.ss-content {
+  width: 1200px;
+  margin: 40px auto 30px auto;
+}
+
+.ss-L {
+  float: left;
+  width: 570px;
+}
+
+.sstop {
+  border-top: 3px solid #666;
+  border-bottom: 3px solid #666;
+  padding: 20px 1px;
+}
+
+.ss-L {
+  border-right: 1px dashed #999;
+  padding-right: 30px;
+}
+
+.ss-L .ss-L-top {
+  width: 100%;
+}
+
+.ss-L .ss-L-top img {
+  width: 100%;
+  height: 164px;
+}
+
+.ss-L .ss-L-top p {
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.ss-L .ss-L-bottom li {
+  width: 30%;
+  float: left;
+  margin-top: 16px;
+  padding: 1.6%;
+}
+
+.ss-L .ss-L-bottom li img {
+  width: 100%;
+  border: 1px solid rgb(138, 74, 0);
+  margin: 0 auto;
+}
+
+.ss-R {
+  width: 570px;
+  float: right;
+}
+
+.ss-R .ss-R-top {
+  max-height: 198px;
+  height: 198px;
+}
+
+.ss-R .ss-R-top img {
+  float: left;
+  width: 157px;
+  height: 120px;
+  display: block;
+  margin-right: 10px;
+  border: 1px solid rgb(138, 74, 0);
+}
+
+.ss-R .ss-R-top {
+  text-indent: 2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ss-R-bottom ul {
+  margin-top: 20px;
+  list-style: inside;
+}
+
+.ss-R-bottom li {
+  margin-top: 20px;
+  padding: 0 2px;
+  line-height: 1.8;
+}
+
+.ss-R-bottom li i {
+  font-style: normal;
+  width: 380px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ss-R-bottom li span {
+  float: right;
+}

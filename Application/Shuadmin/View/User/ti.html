@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="__PUBLIC__/admin/order/css/common.css">
+    <link rel="stylesheet" href="__PUBLIC__/admin/order/css/main.css">
+    <script type="text/javascript" src="__PUBLIC__/admin/order/js/jquery.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/admin/order/js/colResizable-1.3.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/admin/order/js/common.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Home/js/layer/layer.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".list_table").colResizable({
+                liveDrag: true,
+                gripInnerHtml: "<div class='grip'></div>",
+                draggingClass: "dragging",
+                minWidth: 30
+            });
+
+
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+
+<div class="container">
+    <div id="button" class="mt10">
+        <table width="100%" border="0">
+            <tr>
+
+                <td >
+
+                    <input type="button" name="button" class="ext_btn ext_btn_submit" value="查看全部" onclick="location.href='{:U('User/ti')}'">
+
+                </td>
+
+                <td width="35%">
+                    <form action="" method="get">
+                        用户名: <input type="text" name="username" class="input-text lh25" size="30" value="{$Think.get.username}">   <input type="submit"  class="btn btn82 btn_search" value="查询">   </form>
+                </td>
+
+            </tr>
+        </table>
+
+
+
+    </div>
+    <div id="table" class="mt10">
+        <div class="box span10 oh">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="list_table">
+                <tr>
+                    <th width="150" >提现用户名</th>
+                    <th>提现支付宝账户</th>
+                    <th>提现姓名</th>
+                    <th width="100">金额</th>
+                    <th width="200">时间</th>
+                    <th width="180">状态</th>
+                    <th>操作</th>
+                </tr>
+                <tbody id="list">
+                <empty name='list'>
+                    <tr class="tr"><td colspan="7">没有提现记录</td></tr>
+                </empty>
+                <volist name='list' id='vo' >
+                    <tr class="tr">
+                        <td>{$vo.username}</td>
+                        <td>{$vo.payee_account}</td>
+                        <td>{$vo.pay_real_name}</td>
+                        <td>{$vo.money}</td>
+                        <td>{$vo.dateandtime}</td>
+                        <td>
+                            <!--判断状态值,显示对应信息-->
+                            <if condition="$vo['status'] eq 0 ">
+                                <font style="color:#0066cc">申请中</font>
+                                <elseif condition="$vo['status'] eq 1" />
+                                <font style="color:#ccc">同意</font>
+                                <elseif condition="$vo['status'] eq 2" />
+                                <font style="color:#ccc">拒绝</font>
+                            </if>
+                        </td>
+                        <td>
+                            <eq name="vo.status" value="0">
+                            <form action="{:U('User/money')}" method="post" style="display: inline;">
+                                <!--提现申请id-->
+                                <input type="hidden" name="id" value="{$vo.id}">
+                                <!--体现用户-->
+                                <input type="hidden" name="username" value="{$vo.username}"/>
+                                <!--支付宝号码-->
+                                <input type="hidden" name="payee_account" value="{$vo.payee_account}">
+                                <!--提现金额-->
+                                <input type="hidden" name="money" value="{$vo.money}"/>
+                                <!--支付宝姓名-->
+                                <input type="hidden" name="pay_real_name" value="{$vo.pay_real_name}"/>
+                                <!--单号-->
+                                <input type="hidden" name="out_biz_no" value="{$vo.out_biz_no}"/>
+                                <input type="submit"  class="ext_btn ext_btn_submit" value="同意">
+
+                            </form>
+                            <input type="button" name="button" class="ext_btn ext_btn_submit" value="拒绝" onclick="refus('{$vo.id}')">
+                            <else/>
+                                <eq name="vo.status" value="1">已同意</eq>
+                                <eq name="vo.status" value="2">已拒绝</eq>
+                            </eq>
+
+                        </td>
+                    </tr>
+                </volist>
+
+
+                </tbody>
+            </table>
+            <div class="page mt10">
+                <div class="pagination">
+                    {$page}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    function refus(id){
+        $.ajax({
+            "url":"{:U('User/refus')}",
+            "type":"post",
+            "dataType":"json",
+            "data":{"id":id},
+            "success":function(data){
+                if(data.status==false){
+                    layer.open({
+                        content: data.info
+                        ,skin: 'msg'
+                        ,time: 2000 //2秒后自动关闭
+                    });
+                }else{
+                    layer.confirm(data.info, {
+                        btn: ['确认'] //按钮
+                    }, function(){
+                        location.href="{:U('User/ti')}";
+                    });
+                }
+            }
+        })
+    }
+</script>

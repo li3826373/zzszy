@@ -1,0 +1,68 @@
+﻿<include file="Public:head"/>
+<div class="inner-main-container news-page">
+    <div class="inner-banner normal-inner-banner left-text-banner news_index_banner">
+                    <img src="__PUBLIC__/Home/picture/news-banner.jpg" alt="网站建设资讯" />        <div class="normal-banner-inner-wrap">
+            <div class="normal-banner-inner">
+                <div class="container">
+                    <h2 class="inner-banner-title1">NEWS</h2>
+                    <span class="inner-line"></span>
+                    <h1 class="inner-banner-title2">网站建设资讯</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="news-list-page" style="margin-top: 10px;">
+        <div class="container">
+            <div class="news-list-wrap">
+                <!--<div class="news-tab-wrap">-->
+                    <!--<ul class="item-list clearfix">-->
+                        <!--<li class="on"><a href="http://www.fwwl.net/news/">所有</a></li>-->
+                        <!--<li><a href="http://www.fwwl.net/news/list-29-1.html">公司新闻</a></li><li><a href="http://www.fwwl.net/news/list-8-1.html">网站建设</a></li><li><a href="http://www.fwwl.net/news/list-41-1.html">手机微信网站</a></li><li><a href="http://www.fwwl.net/news/list-43-1.html">微信小程序</a></li><li><a href="http://www.fwwl.net/news/list-37-1.html">常见问题</a></li><li><a href="http://www.fwwl.net/news/list-31-1.html">网站优化</a></li>                    </ul>-->
+                <!--</div>-->
+                <div class="news-list news-list-one">
+                    <ul class="item-list clearfix">
+                        <volist name="list" id="vo">
+                        <li class="each-item">
+                            <a href="{:U('News/info',array('articleid'=>$vo['articleid']))}" class="item-inner clearfix" title="{$vo.title}">
+                                <div class="date-wrap">
+                                    <div class="date-inner">
+                                        <div class="day">{$vo.dateandtime|substr=8,2}</div>
+                                        <span class="line"></span>
+                                        <div class="days">{$vo.dateandtime|substr=0,7}</div>
+                                    </div>
+                                </div>
+                                <div class="text-wrap">
+                                    <h3 class="title">{$vo.title}</h3>
+                                    <div class="descrition">{$vo.describle}</div>
+                                    <span class="more">
+                                        <i class="icon"></i>
+                                        <strong>查看详情</strong>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        </volist>
+                    </ul>
+                    <div class="page-wrap clearfix">
+                        <div class="page">
+                        {$page}
+                        </div>
+                       <!-- <div class="prev-next">
+                            <a href="{:U('News/info',array('articleid'=>$next['articleid']))}" title="下一页" class="next"></a>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public:footer"/>
+
+    </div>
+</div>
+<!--nav-->
+<include file="Public:left"/>
+<!--end nav-->
+<script src="__PUBLIC__/Home/js/hotcss.js"></script>
+</body>
+</html>

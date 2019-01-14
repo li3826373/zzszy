@@ -1,0 +1,47 @@
+.about-img{
+	width: 100%;
+}
+.about-img img{
+	width: 100%
+}
+.content{
+	width: 1200px;
+	margin: 0 auto;
+	padding-top: 45px;
+}
+.content .describe{
+	width: 570px;
+	min-height: 280px;
+	margin-right: 50px;
+	padding-left: 36px;
+	margin-top: 40px;
+}
+.content .describe p{
+	text-indent: 2em;
+	font-size: 14px;
+	line-height: 2.5;
+}
+.float{
+	float: left;
+}
+.img3{
+	width: 485px;
+	height: 280px;
+	overflow: hidden;
+}
+.wtf,.wtf3{
+	background: #fff;
+}
+.wtf2{
+	background: #1e5581;
+	color: #fff;
+}
+.img2{
+	margin-bottom: 17px;
+}
+.img4{
+	width: 312px;
+	height: 459px;
+	margin-right: 96px;
+	margin-left: 79px;
+}

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="__PUBLIC__/css/common.css">
+  <link rel="stylesheet" href="__PUBLIC__/css/style.css">
+  <link href="__PUBLIC__/Admin/css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/js/jquery.SuperSlide.js"></script>
+  <script type="text/javascript">
+  $(function(){
+       $(".open").eq(0).next().slideDown();
+     $(".open").click(function(){
+          if($(this).next().css("display")=="block"){
+                  $(this).next().slideUp();
+               }else{
+                 $(this).next().slideDown().siblings("ul").slideUp();
+               }
+        
+             
+     })
+
+  })
+  /*$(function(){
+      $(".sideMenu").slide({
+         titCell:"h3", 
+         targetCell:"ul",
+         defaultIndex:0, 
+         effect:'slideDown', 
+         delayTime:'500' , 
+         trigger:'click', 
+         triggerTime:'150', 
+         defaultPlay:true, 
+         returnDefault:false,
+         easing:'easeInQuint',
+         endFun:function(){
+              scrollWW();
+         }
+       });
+      $(window).resize(function() {
+          scrollWW();
+      });
+  });*/
+  /*function scrollWW(){
+    if($(".side").height()<$(".sideMenu").height()){
+       $(".scroll").show();
+       var pos = $(".sideMenu ul:visible").position().top-38;
+       $('.sideMenu').animate({top:-pos});
+    }else{
+       $(".scroll").hide();
+       $('.sideMenu').animate({top:0});
+       n=1;
+    }
+  } */
+
+/*var n=1;
+function menuScroll(num){
+  var Scroll = $('.sideMenu');
+  var ScrollP = $('.sideMenu').position();
+ 
+  if(num==1){
+     Scroll.animate({top:ScrollP.top-38});
+     n = n+1;
+  }else{
+    if (ScrollP.top > -38 && ScrollP.top != 0) { ScrollP.top = -38; }
+    if (ScrollP.top<0) {
+      Scroll.animate({top:38+ScrollP.top});
+    }else{
+      n=1;
+    }
+    if(n>1){
+      n = n-1;
+    }
+  }
+}*/
+/*退出系统*/
+function  logout(){
+       if(confirm("确认退出?")){
+
+            location.href="{:U('Index/logout')}"
+       }
+
+}
+  </script>
+  <title>后台首页</title>
+</head>
+<body>
+    <div class="top" style="height: 100px;">
+      <div id="top_t">
+        <div id="logo" class="fl"></div>
+         <ul class="nav">
+            <li><a href="{:U('Index/main')}" target="right" class="selected"><img src="__PUBLIC__/Admin/images/icon01.png" title="工作台" /><h2>工作台</h2></a></li>
+            <li><a href="{:U('News/index')}" target="right"><img src="__PUBLIC__/Admin/images/icon02.png" title="模型管理" /><h2>新闻管理 </h2></a></li>
+            <li><a href="{:U('Banner/index')}"  target="right"><img src="__PUBLIC__/Admin/images/icon03.png" title="模块设计" /><h2>其他管理 </h2></a></li>
+            <li><a href="{:U('Message/index')}"  target="right"><img src="__PUBLIC__/Admin/images/icon04.png" title="常用工具" /><h2>留言管理</h2></a></li>
+
+            <li><a href="{:U('Index/config')}" target="right"><img src="__PUBLIC__/Admin/images/icon06.png" title="系统设置" /><h2>系统设置</h2></a></li>
+            </ul>
+        <div id="photo_info" class="fr">
+          <div id="photo" class="fl">
+            <a href="#"><img src="__PUBLIC__/images/a.png" alt="" width="60" height="60"></a>
+          </div>
+         
+          <div id="base_info" class="fr">
+            <div class="help_info">
+           
+              <a href="javascript:void();" id="out" onclick="logout()">&nbsp;退出</a>
+            </div>
+            <div class="info_center">
+              {$_SESSION['adminuser']['username']}
+           
+            </div>
+          </div>
+        </div>
+      </div>
+   
+    </div>

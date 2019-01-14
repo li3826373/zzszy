@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>尚之奕</title>
+    <meta name="keywords" content="尚之奕电子科技">
+    <meta name="description"
+          content="尚之奕电子科技">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--网页标题左侧显示-->
+    <link rel="icon" href="/Public/Home/pic/bitbug_favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="__PUBLIC__/Mo/css/g-ec90b24d65.css">
+     <link rel="stylesheet" href="__PUBLIC__/Mo/css/index-019c215357.css">
+    <link rel="stylesheet" href="__PUBLIC__/Mo/css/index-f941bd0998.css">
+     <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mo/css/template.css" />
+    <style type="text/css" adt="123"></style>
+    <script type="text/javascript" src="__PUBLIC__/Mo/js/stats.js"></script>
+   <script type="text/javascript" src="__PUBLIC__/Mo/js/jquery.min.js"></script>
+   <script src="__PUBLIC__/Mo/js/layer.js"></script>
+ <!--顶部-->
+    ﻿<!--顶部-->
+<link rel="icon" href="/Public/Home/pic/bitbug_favicon.ico" type="image/x-icon">
+
+<div class="mod-header header-open">
+    <div class="layout clearfix">
+        <a href="{:U('Index/index')}" class="mod-header-logo"><img
+            src="/Public/Home/picture/881.jpg" width="333px"  height="40px"></a>
+        <div class="mod-header-nav">
+          <ul>
+              <li class="top-cat jmod-tab-open   cur  ">
+                 <h2><a href="{:U('Index/index')}"    _stat_click_id="1_101">首页</a></h2>
+            </li>
+              <li class="top-cat jmod-tab-open">
+                  <h2><a href="{:U('Service/index')}">服务范围</a></h2></li>
+              <li class="top-cat jmod-tab-open">
+                  <h2><a href="{:U('Case/index')}">我们的作品</a></h2>
+              </li>
+              <li class="top-cat jmod-tab-open">
+                  <h2><a href="{:U('An/index')}">解决方案</a></h2>
+              </li>
+          </ul>
+        </div>
+    </div>
+</div>
+ <!--end-->
+
+
+       
+    
+        <!--banner-->
+        <div class="m-banner">
+            <img src="__PUBLIC__/Mo/picture/banner-model.jpg" />
+        </div>
+        <!--banner end-->
+
+        <!--contetn-->
+        <div class="m-contetn">
+            <div class="m-nav">
+                <h3 class="m-nav-tit">行业选择</h3>
+                <ul class="clear">
+                    <li>
+                        <a href="{:U('Index/moban')}">全部</a>
+                    </li>
+                    <li>
+                        <a href="{:U('Index/moban',array('type'=>1))}">营销展示类</a>
+                    </li>
+                    <li>
+                        <a href="{:U('Index/moban',array('type'=>2))}">管理系统</a>
+                    </li>
+                    <li>
+                        <a href="{:U('Index/moban',array('type'=>3))}">商城类</a>
+                    </li>
+                    <li>
+                        <a href="{:U('Index/moban',array('type'=>4))}">其它</a>
+                    </li>
+                <!--     <li>
+                        <a href="/index.php/Index/fm/type/5.html">教育培训</a>
+                    </li>
+                    <li>
+                        <a href="/index.php/Index/fm/type/6.html">建筑工程</a>
+                    </li>
+                    <li>
+                        <a href="/index.php/Index/fm/type/7.html">旅行\景区</a>
+                    </li>
+                    <li>
+                        <a href="/index.php/Index/fm/type/8.html">食品</a>
+                    </li>
+                    <li>
+                        <a href="/index.php/Index/fm/type/9.html">五金仪器</a>
+                    </li>
+                    <li>
+                        <a href="/index.php/Index/fm/type/10.html">机械</a>
+                    </li>
+                    <li>
+                        <a href="/index.php/Index/fm/type/11.html">其他</a>
+                    </li> -->
+                </ul>
+            </div>
+
+            <div class="m-contetn-list">
+                <ul class="clear">
+                    <volist name="list" id="vo" empty="暂无内容">
+                <li>
+                        <a href="{$vo.link}" target="_blank">
+                            <img src="__ROOT__/Uploads/{$vo.imagename}" width="356"  height="216" />
+                        </a>
+                    </li>
+                    </volist>
+                </ul>
+                 
+            </div>
+
+        </div>
+     <div style="text-align: center;margin-top: 15px;">
+         {$page}
+         </div>
+<!--底部-->
+  ﻿  <div class="mod-footer-prom dark-theme">
+    <div class="layout">
+        <div class="mod-footer-prom-list">
+            <div class="mod-footer-prom-item">
+                <div class="prom-icon prom-icon-qt"></div>
+                <div class="prom-item-ct">
+                    <div class="prom-title">互联网营销专家</div>
+                  <div class="prom-ad">专业人做专业事，专注提供品质服务</div>
+                </div>
+            </div>
+            <div class="mod-footer-prom-item">
+                <div class="prom-icon prom-icon-sp"></div>
+                <div class="prom-item-ct">
+                    <div class="prom-title">需求闪电响应</div>
+                  <div class="prom-ad">首次需求响应不超3分钟</div>
+                </div>
+            </div>
+            <div class="mod-footer-prom-item">
+                <div class="prom-icon prom-icon-gt"></div>
+                <div class="prom-item-ct">
+                    <div class="prom-title">一体化解决方案</div>
+                 <div class="prom-ad">多样化一条龙服务，解决您的后顾之忧</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  <div class="footer-contact">
+  <div class="layout">
+    <div class="footer-contact-col">
+      <p class="footer-contact-tit">联系我们</p>
+      <p class="footer-contact-qq">客服QQ：1755832823</p>
+      <p class="footer-contact-tel">电话：15138937081</p>
+    <!-- <p class="footer-contact-adreess">地址：紫荆山商城路裕鸿国际C座2528室-->
+</p>
+    </div>
+    <div class="footer-contact-col ml">
+      <span class="footer-contact-code"><img src="__ROOT__/Uploads/{$conf.weixin_code}"></span>
+      <p class="footer-contact-tit">关注公众号</p>
+      <p>掌握订单实时状态</p>
+      <p>获取创业最新资讯</p>
+    </div>
+  </div>
+</div>  <div class="footer">
+  <div class="layout">
+    <p><a target="_blank" href="{:U('About/index')}">关于我们</a>|<a target="_blank" _hot_tag="OPEN.COMPLAIN" href=""></a><a target="_blank" _hot_tag="OPEN.COMPLAIN.EN" href="">Complaint Guidelines</a>|<a target="_blank" href="{:U('Index/moban')}">尚之奕模板库</a></p>
+    <p>Copyright 2016 - 2017 郑州尚之奕. All Rights Reserved.</p>
+      <p>网站备案：<a  href="http://www.miitbeian.gov.cn/">豫ICP备16019720号-2</a></p>
+  </div>
+</div>
+
+<script src="__PUBLIC__/Mo/js/common-cb517c5c11.js"></script>
+<!--end-->
+ </body>
+ <style type="text/css" id="18551964313"></style>
+ </html>
+
+<script type="text/javascript" src="__PUBLIC__/Mo/js/stats.js"></script>
+<script src="__PUBLIC__/Mo/js/main.js"></script>
+<script src="__PUBLIC__/Mo/js/common-12689916a6.js"></script>
+<script src="__PUBLIC__/Mo/js/fixed-bar-9afbdfe31f.js"></script>
+<script src="__PUBLIC__/Mo/js/main-a724642ac7.entry.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Mo/js/jquery.min.js"></script>
+<script src="__PUBLIC__/Mo/js/layer.js"></script>

@@ -1,0 +1,128 @@
+﻿@charset "utf-8";
+
+/* CSS Document */
+
+html,
+body,
+div,
+nav,
+section,
+footer,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+img,
+a,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+table,
+th,
+tr,
+td,
+form,
+input,
+select,
+option,
+textarea,
+button {
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	outline: none;
+	vertical-align: top;
+}
+
+.clear::after {
+	content: "";
+	height: 0;
+	visibility: hidden;
+	display: block;
+	clear: both;
+}
+
+.clear {
+	*zoom: 1;
+}
+
+body {
+	font-family: "Microsoft yahei";
+	font-size: 14px;
+	color: #666;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+iframe{
+	border: none;
+	overflow: hidden;
+}
+/***************以上是公共修饰 集体声明*******************/
+
+
+.m-banner{
+	width: 100%;
+}
+.m-banner img{
+	width: 100%;
+}
+.m-contetn{
+	width: 1200px;
+	margin: 0 auto;
+}
+.m-nav {
+	margin-top: 30px;
+}
+.m-nav .m-nav-tit{
+	font-weight: 200;
+}
+.m-nav ul{
+	margin-top: 20px;
+}
+.m-nav ul li{
+	float: left;
+	margin-right: 30px;
+}
+.m-nav ul li:hover a{
+	color: #2f82ff;
+}
+
+.m-contetn-list ul{
+	margin-top: 20px;
+}
+.m-contetn-list ul li{
+	display: block;
+	width: 356px;
+	height: 216px;
+	float: left;
+	margin-right: 66px;
+	box-shadow: 2px 6px 16px #c3c1c1;
+	margin-top: 50px;
+	transition: .3s all linear;
+}
+.m-contetn-list ul li:nth-child(3n){
+	margin-right: 0;
+}
+.m-contetn-list ul img{
+	width: 100%;
+	height: 100%;
+}
+.m-contetn-list ul li:hover {
+	transform: scale(1.1,1.1);
+}

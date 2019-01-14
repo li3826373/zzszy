@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="__PUBLIC__/css/common.css">
+        <link rel="stylesheet" href="__PUBLIC__/css/main.css">
+        <script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/colResizable-1.3.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+
+        <script type="text/javascript">
+            $(function () {
+                $(".list_table").colResizable({
+                    liveDrag: true,
+                    gripInnerHtml: "<div class='grip'></div>",
+                    draggingClass: "dragging",
+                    minWidth: 30
+                });
+
+
+            });
+        </script>
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div class="container">
+            <div id="button" class="mt10">
+
+                <input type="button" value="新增" class="btn btn82 btn_add" onclick="location.href = '{:U('Banner/addbanner')}'">
+
+
+
+            </div>
+            <div id="table" class="mt10">
+                <div class="box span10 oh">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="list_table">
+                        <tr>
+
+                            <th width="80" >ID</th>
+                            <th width="80">标题 </th>
+                            <th width="280">图片 </th>
+                            <th width="180">URL </th> 
+                            <th width="80">位置</th>
+                            <th width="220">操作</th>
+                        </tr>
+                        <tbody id="list">
+
+
+                        <volist name='list' id='v'>
+                            <tr class="tr">
+                                <td>{$v.id}</td>
+                                <td >{$v.title}</td>
+                                <td ><img src="__ROOT__/Uploads/{$v.imagename}" width="200" height="100"></td>
+                                 <td >{$v.link}</td>
+                                 <td>
+                                 <eq name="v.postion" value="1">首页</eq>
+                                <eq name="v.postion" value="2">公司简介</eq>
+                                <eq name="v.postion" value="3">新闻中心</eq>
+                                <eq name="v.postion" value="4">验收公示</eq>
+                                <eq name="v.postion" value="5">检测设备</eq>
+                                     <eq name="v.postion" value="6">资质荣誉</eq>
+                                <eq name="v.postion" value="7">服务范围</eq>
+                                     <eq name="v.postion" value="8">人才招聘</eq>
+                                     <eq name="v.postion" value="9">在线留言</eq>
+                                     <eq name="v.postion" value="10">联系我们</eq>
+                                 </td>
+                                <td><a href="{:U('Banner/addbanner',array('id'=>$v['id']))}">修改</a> 　 <a href="javascript:void()" onclick="del($(this),{$v['id']})">删除</a></td>
+                            </tr>
+                        </volist>
+
+                        </tbody>
+                    </table>
+                    <div class="page mt10">
+                        <div class="pagination">                         
+                            {$pagesize}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </body>
+</html>
+<script type="text/javascript">
+  $(function(){
+     $(".pagination").find("div").css("text-align","center");
+     $(".pagination").find("div").find("a").css("margin-left","5px");
+
+  })
+function del(obj,id){
+    $.ajax({
+    "url":"{:U('Banner/del')}",
+    "type":"post",
+    "data":{"id":id},
+    "dataType":"json",
+    "error":function(){alert('删除失败')},
+    "success":function(re){
+           if(re.state==1){
+            obj.parent().parent().remove();
+           }
+           alert(re.msg);
+
+    }
+ 
+
+    });
+
+}
+</script>

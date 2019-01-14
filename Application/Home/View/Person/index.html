@@ -1,0 +1,39 @@
+﻿<include file="Public:head"/>
+<!--header-->
+<div class="page_banner" style="background: url(__ROOT__/Uploads/{$banner.imagename}) no-repeat center;"></div><div class="wrap mar">
+
+<div class="left_side">
+<ul class="left_sideul">
+    <volist name="checkall" id="vo">
+        <li><a href="{:U('Service/index',array('typeid'=>$vo['id']))}"><i class="fa fa-arrow-right"></i>&nbsp;&nbsp;{$vo.typename}</a></li>
+        &nbsp;&nbsp;</volist>
+</ul>
+    <div class="pcontact_us ovfl">
+        <p class="pcontact_p1">
+            服务热线：
+        </p>
+        <div class="pcontact_us_01">
+            {$conf.tel}</div>
+    </div>
+<!--contactus-->
+</div>
+<!--left_side-->
+<div class="right_side">
+<div class="right_title">
+<div class="right_title_left">人才招聘</div>
+<div class="right_title_right"><span class="right_title_right_sp1"></span><span class="right_title_right_sp2">当前位置：<a href="{:U('Index/index')}">首页</a> > 人才招聘</span></div>
+</div>
+<!--right_title-->
+<div class="right_content">
+<div id="company_main">
+　{$about.content|htmlspecialchars_decode}
+</div>
+</div>
+<!--right_content-->
+</div>
+<!--right_side-->
+<div class="clear"></div>
+</div>
+<!--wrap-->
+
+<include file="Public:footer"/>

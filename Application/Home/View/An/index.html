@@ -1,0 +1,48 @@
+﻿<include file="Public:head"/>
+<div class="inner-main-container">
+    <div class="inner-banner normal-inner-banner">
+        <img src="__PUBLIC__/Home/picture/banner_solution.jpg" alt="网站解决方案" />
+        <div class="normal-banner-inner-wrap">
+            <div class="normal-banner-inner">
+                <h2 class="inner-banner-title">互联网全终端解决方案</h2>
+                <div class="descrition">完美搭建 PC网站 / 手机网站 / 微信网站 / 微信小程序 / APP 等<br>一站式互联网应用</div>
+            </div>
+        </div>
+    </div>
+    <div class="solution-list-page">
+        <div class="container">
+            <div class="solution-list-wrap">
+                <div class="solution-list">
+                    <ul class="item-list clearfix">
+                        <volist name="list" id="vo">
+                        <li class="each-item">
+                            <a href="{:U('An/info',array('articleid'=>$vo['articleid']))}" title="{$vo.title}" class="item-inner">
+                                <div class="image-wrap">
+                                    <div class="image-inner">
+                                        <img src="__ROOT__/Uploads/{$vo.imagename}" alt="{$vo.title}" />
+                                    </div>
+                                </div>
+                                <div class="text-wrap">
+                                    <div class="text-inner">
+                                        <h3 class="title">{$vo.title}</h3>
+                                        <div class="descrition">{$vo.describle}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        </volist>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public:footer"/>
+    </div>
+</div>
+<!--nav-->
+<include file="Public:left"/>
+<!--end nav-->
+<script src="__PUBLIC__/Home/js/hotcss.js"></script>
+</body>
+</html>

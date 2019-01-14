@@ -1,0 +1,106 @@
+﻿<include file="Public:head"/>
+<div class="inner-main-container">
+    <div class="inner-banner normal-inner-banner cases_index_banner">
+        <img src="__PUBLIC__/Home/picture/banner_cases.jpg" alt="网站设计案例" />        <div class="normal-banner-inner-wrap">
+        <div class="normal-banner-inner">
+            <h2 class="inner-banner-title">用心做好每一个网站<span class="mark"><img alt="，" src="__PUBLIC__/Home/picture/mark2.png"></span>案例是我们最好的名片</h2>
+        </div>
+    </div>
+    </div>
+    <div class="ourwork-page">
+        <div class="container">
+            <div class="ourwork-list-wrap">
+                <div class="ourwork-tab-wrap clearfix">
+                    <div class="item-list">
+                        <ul class="clearfix">
+                            <li class="on">
+                                <a href="{:U('Case/index')}" title="网站设计案例">全部</a>
+                            </li>
+                            <volist name="newsall" id="vo">
+                            <li >
+                                <a href="{:U('Case/index',array('typeid'=>$vo['id']))}" title='{$vo.typename}'>{$vo.typename}</a>
+                            </li>
+                            </volist>
+                        </ul>
+                        <span class="nav-icon"></span> </div>
+                </div>
+                <div class="ourwork-list">
+                    <ul class="item-list clearfix">
+                        <volist name="list" id="vo">
+                        <li class="each-item">
+                            <div class="item-inner">
+                                <a rel="nofollow" href="{:U('Case/info',array('articleid'=>$vo['articleid']))}" target="_blank" title="{$vo.title}">
+                                <div class="image-wrap">
+                                    <div class="image-inner"> <img src="__ROOT__/Uploads/{$vo.imagename}" alt="{$vo.title}" /> </div>
+                                </div>
+                                <div class="text-wrap">
+                                    <div class="text-inner"> <span class="icon">
+                                        <img src="__PUBLIC__/Home/picture/ico_pc.png" alt="电脑PC网站" />
+                                        <img src="__PUBLIC__/Home/picture/ico_phone.png" alt="手机微信网站" />                                                                                        </span>
+                                        <h3 class="title">{$vo.title}</h3>
+                                        <!--<span class="small">企业网站 手机微信网站 </span> </div>-->
+                                    </div>
+                            </div>
+                                </a>
+                            <div class="scale-box">
+                                <div class="scale-inner">
+                                    <div class="image" style="background:url(images/5a3a2289aca34.jpg) no-repeat center bottom;background-size:auto 100%;"></div>
+                                    <div class="text">
+                                        <div class="inner">
+                                            <a rel="nofollow" href="{:U('Case/info',array('articleid'=>$vo['articleid']))}" target="_blank" title="{$vo.title}">
+                                            <h3 class="s-title">{$vo.title}</h3>
+                                          <span class="line"></span>
+                                            <div class="descrition">{$vo.describle}</div>
+                                        </a>
+                                            <div class="bottom-icon">
+                                                <a rel="nofollow" href="{:U('Case/info',array('articleid'=>$vo['articleid'],'type'=>1))}" target="_blank" title="{$vo.title}" class="link link1"></a>
+                                                <a rel="nofollow" href="{:U('Case/info',array('articleid'=>$vo['articleid'],'type'=>2))}" target="_blank" title="{$vo.title}" class="link link2"></a>                                                                                                                                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </volist>
+                        </ul>
+                    <div class="page-wrap clearfix">
+                        <div>
+
+                            {$page}
+                        </div>
+                      <!--  <div class="prev-next">
+                            <a href="http://www.fwwl.net/cases/list-0-2.html" title="下一页" class="next"></a>
+                    </div>-->
+                    </div>
+                    <!--<div class="load-more"> <a href="#" rel="nofollow" class="radiu-button">Load More</a> </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public:footer"/>
+</div>
+</div>
+<!--nav-->
+<include file="Public:left"/>
+<!--end nav-->
+<script src="__PUBLIC__/Home/js/hotcss.js"></script>
+<!--<script>
+    var _bdhmProtocol = (("http:" == document.location.protocol) ? " http://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd8344b6a8c16d55b7dabce090ed226b7' type='text/javascript'%3E%3C/script%3E"));
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "http://hm.baidu.com/hm.js?6a859e19cf092a528c89c574266f4d60";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "http://hm.baidu.com/hm.js?7fbb5eb7382fbb88429c177c19198ffb";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>-->
+</body>
+</html>

@@ -1,0 +1,102 @@
+﻿<include file="Public:head"/>
+<div class="inner-main-container">
+    <div class="inner-banner normal-inner-banner left-text-banner news_index_banner">
+                    <img src="__PUBLIC__/Home/picture/news-banner.jpg" alt="网站建设资讯" />        <div class="normal-banner-inner-wrap">
+            <div class="normal-banner-inner">
+                <h1 class="inner-banner-title">{$info.title}</h1>
+            </div>
+        </div>
+    </div>
+    <div class="normal-info-page">
+        <div class="container">
+            <div class="normal-info-wrap">
+                <div class="normal-info-container">
+                    <div class="news-info-title">
+                        <a class="kinds fr" href="{:U('Index/index')}">网站建设</a>
+                        <span>{$info.dateandtime}</span>
+                        <span>|</span>
+                        <span>阅读：{$info.hit}</span>
+                    </div>
+                    <article>
+                        <div class="editor" id="editor">
+                            {$info.content|htmlspecialchars_decode}
+&nbsp;</div>
+                    </article>
+                    <script type="text/javascript">
+                document.getElementById("menu7").className = "on";
+                var resizeContentID = "editor";
+                var maxWidth = $("#editor").width();
+                var images = document.getElementById(resizeContentID).getElementsByTagName("img");
+                for (var i = 0; i < images.length; i++) {
+                    resizepic(images[i]);
+                }
+                function resizepic(thispic)
+                {
+                    thispic.onload = function() {
+                        if (thispic.width > maxWidth) {
+                            thispic.style.height = thispic.height * maxWidth / thispic.width + "px";
+                            thispic.style.width = maxWidth + "px";
+                        }
+                    }
+                }
+		document.oncopy=function(){return false;};
+            </script>
+                    <div class="prev-next-wrap">
+                        <div class="prev">
+                            <span>上一篇  |  </span>
+                            <notempty name="last">
+                            <a href="{:U('News/info',array('articleid'=>$last['articleid']))}">{$last.title}</a>
+                                <else/>
+                                暂无内容
+                            </notempty>
+                        </div>
+                        <div class="prev">
+                            <span>下一篇  |  </span>
+                        <notempty name="next">
+                            <a href="{:U('News/info',array('articleid'=>$next['articleid']))}">{$next.title}</a>
+                            <else/>
+                            暂无内容
+                        </notempty>
+                        </div>
+                    </div>
+                </div>
+                <div class="more-relate-list">
+                    <h2 class="relate-title">相关资讯</h2>
+                    <div class="news-list news-list-one">
+                        <ul class="item-list clearfix">
+                            <volist name="other" id="vo">
+                            <li class="each-item">
+                                <a href="{:U('News/info',array('articleid'=>$vo['articleid']))}" title="{$info.title}" class="item-inner clearfix">
+                                    <div class="date-wrap">
+                                        <div class="date-inner">
+                                            <div class="day">{$vo.dateandtime|substr=8,2}</div>
+                                            <span class="line"></span>
+                                            <div class="days">{$vo.dateandtime|substr=0,7}</div>
+                                        </div>
+                                    </div>
+                                    <div class="text-wrap">
+                                        <h3 class="title">{$vo.title}</h3>
+                                        <div class="descrition">{$vo.describle}</div>
+                                        <span class="more">
+                                        <i class="icon"></i>
+                                        <strong>查看详情</strong>
+                                    </span>
+                                    </div>
+                                </a>
+                            </li>
+                            </volist>
+                        </ul>
+                    </div>
+                </div>            </div>
+        </div>
+    </div>
+</div>
+<include file="Public:footer"/>
+    </div>
+</div>
+<!--nav-->
+<include file="Public:left"/>
+<!--end nav-->
+<script src="__PUBLIC__/Home/js/hotcss.js"></script>
+</body>
+</html>
